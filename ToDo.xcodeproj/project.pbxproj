@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EB59DE6F28E4B99900E2EEAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE6E28E4B99900E2EEAA /* AppDelegate.swift */; };
 		EB59DE7128E4B99900E2EEAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE7028E4B99900E2EEAA /* SceneDelegate.swift */; };
-		EB59DE7328E4B99900E2EEAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE7228E4B99900E2EEAA /* ViewController.swift */; };
 		EB59DE7628E4B99900E2EEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7428E4B99900E2EEAA /* Main.storyboard */; };
 		EB59DE7828E4B99A00E2EEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7728E4B99A00E2EEAA /* Assets.xcassets */; };
 		EB59DE7B28E4B99A00E2EEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7928E4B99A00E2EEAA /* LaunchScreen.storyboard */; };
+		EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8C28E4C57300E2EEAA /* Books.swift */; };
+		EB59DE8F28E4D3E500E2EEAA /* BooksToReadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB59DE6B28E4B99900E2EEAA /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB59DE6E28E4B99900E2EEAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB59DE7028E4B99900E2EEAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB59DE7228E4B99900E2EEAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB59DE7528E4B99900E2EEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB59DE7728E4B99A00E2EEAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB59DE7A28E4B99A00E2EEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB59DE7C28E4B99A00E2EEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB59DE8C28E4C57300E2EEAA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksToReadTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,72 @@
 		EB59DE6D28E4B99900E2EEAA /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				EB59DE6E28E4B99900E2EEAA /* AppDelegate.swift */,
-				EB59DE7028E4B99900E2EEAA /* SceneDelegate.swift */,
-				EB59DE7228E4B99900E2EEAA /* ViewController.swift */,
-				EB59DE7428E4B99900E2EEAA /* Main.storyboard */,
+				EB59DE8928E4C37D00E2EEAA /* Delegates */,
+				EB59DE8728E4C33900E2EEAA /* Architecture */,
+				EB59DE8628E4C30000E2EEAA /* Storyboards */,
 				EB59DE7728E4B99A00E2EEAA /* Assets.xcassets */,
-				EB59DE7928E4B99A00E2EEAA /* LaunchScreen.storyboard */,
 				EB59DE7C28E4B99A00E2EEAA /* Info.plist */,
 			);
 			path = ToDo;
+			sourceTree = "<group>";
+		};
+		EB59DE8328E4C1B900E2EEAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EB59DE8428E4C1BF00E2EEAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE8C28E4C57300E2EEAA /* Books.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EB59DE8528E4C1D100E2EEAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE8828E4C35600E2EEAA /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB59DE8628E4C30000E2EEAA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE7428E4B99900E2EEAA /* Main.storyboard */,
+				EB59DE7928E4B99A00E2EEAA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EB59DE8728E4C33900E2EEAA /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE8428E4C1BF00E2EEAA /* Models */,
+				EB59DE8328E4C1B900E2EEAA /* Views */,
+				EB59DE8528E4C1D100E2EEAA /* Controllers */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		EB59DE8828E4C35600E2EEAA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EB59DE8928E4C37D00E2EEAA /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EB59DE6E28E4B99900E2EEAA /* AppDelegate.swift */,
+				EB59DE7028E4B99900E2EEAA /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +136,7 @@
 				EB59DE6728E4B99900E2EEAA /* Sources */,
 				EB59DE6828E4B99900E2EEAA /* Frameworks */,
 				EB59DE6928E4B99900E2EEAA /* Resources */,
+				EB59DE8228E4BB6300E2EEAA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -133,14 +193,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB59DE8228E4BB6300E2EEAA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB59DE6728E4B99900E2EEAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB59DE7328E4B99900E2EEAA /* ViewController.swift in Sources */,
+				EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */,
 				EB59DE6F28E4B99900E2EEAA /* AppDelegate.swift in Sources */,
 				EB59DE7128E4B99900E2EEAA /* SceneDelegate.swift in Sources */,
+				EB59DE8F28E4D3E500E2EEAA /* BooksToReadTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
