@@ -5,9 +5,10 @@
 //  Created by Tatevik Brsoyan on 28.09.22.
 //
 
-import Foundation
+import UIKit
 
 struct Books: Equatable {
+
     let id = UUID()
     var title: String
     var author: String

@@ -31,10 +31,61 @@
                             <outlet property="delegate" destination="osT-Lc-i04" id="5Jt-H9-cP6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books to Read" id="AiN-qi-rin"/>
+                    <navigationItem key="navigationItem" title="Books to Read" id="AiN-qi-rin">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jpe-YS-4if">
+                            <connections>
+                                <segue destination="Gjh-LT-Q5M" kind="presentation" id="LvI-lY-Qk0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="879.71014492753625" y="90.401785714285708"/>
+        </scene>
+        <!--New Book-->
+        <scene sceneID="wAz-sq-wST">
+            <objects>
+                <tableViewController id="vdQ-Hw-Oxq" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kac-Aq-pk4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CLF-xo-YKa">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLF-xo-YKa" id="vid-1o-5zg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vdQ-Hw-Oxq" id="9dU-Sh-Xcg"/>
+                            <outlet property="delegate" destination="vdQ-Hw-Oxq" id="V9Z-y6-owl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Book" largeTitleDisplayMode="never" id="xsN-qj-Wp4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSH-8u-PAk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fxl-Qm-Qn1">
+            <objects>
+                <navigationController id="Gjh-LT-Q5M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z3J-co-2Er">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vdQ-Hw-Oxq" kind="relationship" relationship="rootViewController" id="ChA-hH-jIj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IM2-tt-EVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="50Z-Si-tyW">
