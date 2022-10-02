@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Books: Equatable {
+struct Book: Equatable {
 
     let id = UUID()
     var title: String
@@ -16,24 +16,24 @@ struct Books: Equatable {
     var notes: String?
     var isComplete: Bool
 
-    static func loadBooks() -> [Books]? {
+    static func loadBooks() -> [Book]? {
         return nil
     }
 
-    static func loadSampleBooks() -> [Books] {
-        let book1 = Books(
+    static func loadSampleBooks() -> [Book] {
+        let book1 = Book(
             title: "Tree Comrades",
             author: "Erich Maria Remarque",
             readDate: Date(),
             notes: "novel, 1936",
             isComplete: true)
-        let book2 = Books(
+        let book2 = Book(
             title: "Fahrenheit 451",
             author: "Ray Bradbury",
             readDate: Date(),
             notes: "dystopian novel, 1953",
             isComplete: true)
-        let book3 = Books(
+        let book3 = Book(
             title: "Jane Eyre",
             author: "CHarlotter Bronte",
             readDate: Date(),
@@ -42,7 +42,7 @@ struct Books: Equatable {
         return [book1, book2, book3]
     }
 
-    static func == (lhs: Books, rhs: Books ) -> Bool {
+    static func == (lhs: Book, rhs: Book ) -> Bool {
         return lhs.id == rhs.id
     }
 }

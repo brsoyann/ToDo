@@ -14,6 +14,7 @@
 		EB59DE7B28E4B99A00E2EEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7928E4B99A00E2EEAA /* LaunchScreen.storyboard */; };
 		EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8C28E4C57300E2EEAA /* Books.swift */; };
 		EB59DE8F28E4D3E500E2EEAA /* BooksToReadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */; };
+		EB59DE9128E8580900E2EEAA /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE9028E8580900E2EEAA /* BookDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB59DE7C28E4B99A00E2EEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB59DE8C28E4C57300E2EEAA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksToReadTableViewController.swift; sourceTree = "<group>"; };
+		EB59DE9028E8580900E2EEAA /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */,
+				EB59DE9028E8580900E2EEAA /* BookDetailTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB59DE9128E8580900E2EEAA /* BookDetailTableViewController.swift in Sources */,
 				EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */,
 				EB59DE6F28E4B99900E2EEAA /* AppDelegate.swift in Sources */,
 				EB59DE7128E4B99900E2EEAA /* SceneDelegate.swift in Sources */,

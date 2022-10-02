@@ -7,9 +7,13 @@
 
 import UIKit
 
-class BooksToReadTableViewController: UITableViewController {
+final class BooksToReadTableViewController: UITableViewController {
 
-    var books = [Books]()
+    var books = [Book]()
+
+    @IBAction func unwindToBookListSegue (_ sender: UIStoryboardSegue ) {
+
+    }
 
     // MARK: - LifeCycle
 
@@ -17,10 +21,10 @@ class BooksToReadTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
 
-        if let savedBooks = Books.loadBooks() {
+        if let savedBooks = Book.loadBooks() {
             books = savedBooks
         } else {
-            books = Books.loadSampleBooks()
+            books = Book.loadSampleBooks()
         }
     }
 
@@ -55,4 +59,17 @@ class BooksToReadTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+
+    @IBAction func unwindToBooksToReadList (segue: UIStoryboardSegue ) {
+        guard segue.identifier == "saveUnwind" else { return }
+        guard let sourceViewController = segue.source as? BookDetailTableViewController else { return }
+
+        if let book = sourceViewController.book {
+            let newIndexPath = IndexPath(row: books.count, section: 0)
+
+            books.append(book)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+
 }
