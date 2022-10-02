@@ -121,14 +121,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Read Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ebZ-Y2-DY7">
-                                                    <rect key="frame" x="20" y="14" width="69" height="17"/>
+                                                    <rect key="frame" x="20" y="12" width="82" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DEN-JQ-O4P">
-                                                    <rect key="frame" x="361" y="16" width="33" height="14.5"/>
+                                                    <rect key="frame" x="354.5" y="14" width="39.5" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
@@ -202,7 +202,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="chV-jv-upI">
                             <connections>
-                                <segue destination="rel-GO-DVP" kind="unwind" identifier="saveUnwind" unwindAction="unwindToBookListSegue:" id="FnQ-zF-JHm"/>
+                                <segue destination="rel-GO-DVP" kind="unwind" identifier="saveUnwind" unwindAction="unwindToBooksToReadListWithSegue:" id="FnQ-zF-JHm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

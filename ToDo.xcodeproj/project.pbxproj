@@ -12,7 +12,7 @@
 		EB59DE7628E4B99900E2EEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7428E4B99900E2EEAA /* Main.storyboard */; };
 		EB59DE7828E4B99A00E2EEAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7728E4B99A00E2EEAA /* Assets.xcassets */; };
 		EB59DE7B28E4B99A00E2EEAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB59DE7928E4B99A00E2EEAA /* LaunchScreen.storyboard */; };
-		EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8C28E4C57300E2EEAA /* Books.swift */; };
+		EB59DE8D28E4C57300E2EEAA /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8C28E4C57300E2EEAA /* Book.swift */; };
 		EB59DE8F28E4D3E500E2EEAA /* BooksToReadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */; };
 		EB59DE9128E8580900E2EEAA /* BookDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59DE9028E8580900E2EEAA /* BookDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		EB59DE7728E4B99A00E2EEAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB59DE7A28E4B99A00E2EEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB59DE7C28E4B99A00E2EEAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB59DE8C28E4C57300E2EEAA /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		EB59DE8C28E4C57300E2EEAA /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		EB59DE8E28E4D3E500E2EEAA /* BooksToReadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksToReadTableViewController.swift; sourceTree = "<group>"; };
 		EB59DE9028E8580900E2EEAA /* BookDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 		EB59DE8428E4C1BF00E2EEAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EB59DE8C28E4C57300E2EEAA /* Books.swift */,
+				EB59DE8C28E4C57300E2EEAA /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB59DE9128E8580900E2EEAA /* BookDetailTableViewController.swift in Sources */,
-				EB59DE8D28E4C57300E2EEAA /* Books.swift in Sources */,
+				EB59DE8D28E4C57300E2EEAA /* Book.swift in Sources */,
 				EB59DE6F28E4B99900E2EEAA /* AppDelegate.swift in Sources */,
 				EB59DE7128E4B99900E2EEAA /* SceneDelegate.swift in Sources */,
 				EB59DE8F28E4D3E500E2EEAA /* BooksToReadTableViewController.swift in Sources */,

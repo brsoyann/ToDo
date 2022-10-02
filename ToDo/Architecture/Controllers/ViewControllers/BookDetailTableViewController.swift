@@ -28,7 +28,7 @@ final class BookDetailTableViewController: UITableViewController {
     let datePickerIndexPath = IndexPath(row: 1, section: 1)
     let notesIndexPath = IndexPath(row: 0, section: 2)
 
-    // MARK: - <##>LifeCycle
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,7 @@ final class BookDetailTableViewController: UITableViewController {
         book = Book(title: title, author: author, readDate: readDate, notes: notes, isComplete: isComplete)
     }
 
-    // MARK: - <##>Helpers
+    // MARK: - Helpers
 
     func updateSaveButtonState() {
         let shouldEnableSaveButton = (titleTextField.text?.isEmpty == false && authorTextField.text?.isEmpty == false)
@@ -98,7 +98,7 @@ final class BookDetailTableViewController: UITableViewController {
         readDateLabel.text = date.formatted(.dateTime.month(.defaultDigits).day().year(.twoDigits).hour().minute())
     }
 
-    // MARK: - <##>CallBacks
+    // MARK: - CallBacks
 
     @IBAction func textEditingChanged(_ sender: UITextField) {
         updateSaveButtonState()
