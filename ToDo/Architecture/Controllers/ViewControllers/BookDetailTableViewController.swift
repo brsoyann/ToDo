@@ -14,7 +14,7 @@ final class BookDetailTableViewController: UITableViewController {
     // MARK: - Subviews
 
     @IBOutlet private var titleTextField: UITextField!
-    @IBOutlet private  var isCompleteButton: UIButton!
+    @IBOutlet private var isCompleteButton: UIButton!
     @IBOutlet private var authorTextField: UITextField!
     @IBOutlet private var readDateLabel: UILabel!
     @IBOutlet private var readDateDatePicker: UIDatePicker!
