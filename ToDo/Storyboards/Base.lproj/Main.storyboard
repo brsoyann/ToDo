@@ -23,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Gjh-LT-Q5M" kind="presentation" id="0km-WZ-v2A"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -40,7 +43,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sx-2b-A15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="90.401785714285708"/>
+            <point key="canvasLocation" x="780" y="73"/>
         </scene>
         <!--New Book-->
         <scene sceneID="wAz-sq-wST">
@@ -121,14 +124,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Read Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ebZ-Y2-DY7">
-                                                    <rect key="frame" x="20" y="12" width="82" height="20.5"/>
+                                                    <rect key="frame" x="20" y="14" width="69" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DEN-JQ-O4P">
-                                                    <rect key="frame" x="354.5" y="14" width="39.5" height="18"/>
+                                                    <rect key="frame" x="361" y="16" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
@@ -231,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vdQ-Hw-Oxq" kind="relationship" relationship="rootViewController" id="ChA-hH-jIj"/>
+                        <segue destination="vdQ-Hw-Oxq" kind="relationship" relationship="rootViewController" destinationCreationSelector="editBook:sender:" id="ChA-hH-jIj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IM2-tt-EVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,7 +252,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="osT-Lc-i04" kind="relationship" relationship="rootViewController" id="NEI-7P-icp"/>
+                        <segue destination="osT-Lc-i04" kind="relationship" relationship="rootViewController" destinationCreationSelector="editBook:sender:" id="NEI-7P-icp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdD-3G-QaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,6 +260,9 @@
             <point key="canvasLocation" x="-30.434782608695656" y="90.401785714285708"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0km-WZ-v2A"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>

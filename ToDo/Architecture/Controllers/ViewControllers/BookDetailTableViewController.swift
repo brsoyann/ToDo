@@ -32,8 +32,19 @@ final class BookDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        readDateDatePicker.date = Date().addingTimeInterval(24*3600)
-        updateDueDateLabel(date: readDateDatePicker.date)
+        let currentReadDate: Date
+        if let book = book {
+            navigationItem.title = "Book"
+            titleTextField.text = book.title
+            authorTextField.text = book.author
+            isCompleteButton.isSelected = book.isComplete
+            currentReadDate = book.readDate
+            notesTextView.text = book.notes
+        } else {
+            currentReadDate = Date().addingTimeInterval(24*3600)
+        }
+        readDateDatePicker.date = currentReadDate
+        updateDueDateLabel(date: currentReadDate)
         updateSaveButtonState()
     }
 
@@ -84,7 +95,15 @@ final class BookDetailTableViewController: UITableViewController {
         let readDate = readDateDatePicker.date
         let notes = notesTextView.text
 
-        book = Book(title: title, author: author, readDate: readDate, notes: notes, isComplete: isComplete)
+        if book != nil {
+            book?.title = title
+            book?.author = author
+            book?.isComplete = isComplete
+            book?.readDate = readDate
+            book?.notes = notes
+        } else {
+            book = Book(title: title, author: author, readDate: readDate, notes: notes, isComplete: isComplete)
+        }
     }
 
     // MARK: - Helpers

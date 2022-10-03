@@ -15,6 +15,17 @@ final class BooksToReadTableViewController: UITableViewController {
 
     }
 
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> BookDetailTableViewController? {
+        let detailController = BookDetailTableViewController(coder: coder)
+        guard let cell = sender as? UITableViewCell,
+              let indexPath = tableView.indexPath(for: cell) else {
+                  return detailController
+              }
+        tableView.deselectRow(at: indexPath, animated: true)
+        detailController?.book = books[indexPath.row]
+        return detailController
+    }
+
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
@@ -65,10 +76,15 @@ final class BooksToReadTableViewController: UITableViewController {
         guard let sourceViewController = segue.source as? BookDetailTableViewController else { return }
 
         if let book = sourceViewController.book {
-            let newIndexPath = IndexPath(row: books.count, section: 0)
+            if let indexOfExistingBook = books.firstIndex(of: book) {
+                books[indexOfExistingBook] = book
+                tableView.reloadRows(at: [IndexPath(row: indexOfExistingBook, section: 0)], with: .automatic)
+            } else {
+                let newIndexPath = IndexPath(row: books.count, section: 0)
+                books.append(book)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
 
-            books.append(book)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
 
