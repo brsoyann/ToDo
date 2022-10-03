@@ -15,7 +15,10 @@ final class BooksToReadTableViewController: UITableViewController {
 
     }
 
-    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> BookDetailTableViewController? {
+    @IBSegueAction func editBook(
+        _ coder: NSCoder,
+        sender: Any?)
+    -> BookDetailTableViewController? {
         let detailController = BookDetailTableViewController(coder: coder)
         guard let cell = sender as? UITableViewCell,
               let indexPath = tableView.indexPath(for: cell) else {
@@ -41,23 +44,35 @@ final class BooksToReadTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int)
+    -> Int {
         // #warning Incomplete implementation, return the number of rows
         return books.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath)
     -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCellIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "BookCellIdentifier",
+            for: indexPath)
+                as? BookCell else { fatalError() }
 
         let book = books[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = book.title
-        cell.contentConfiguration = content
+        cell.titleLabel?.text = book.title
+        cell.isCompleteButton.isSelected = book.isComplete
+        cell.delegate = self
+
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(
+        _ tableView: UITableView,
+        canEditRowAt indexPath: IndexPath)
+    -> Bool {
         return true
     }
 
@@ -88,4 +103,15 @@ final class BooksToReadTableViewController: UITableViewController {
         }
     }
 
+}
+
+extension BooksToReadTableViewController: BookCellDelegate {
+    func checkMarkTapped(sender: BookCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            var book = books[indexPath.row]
+            book.isComplete.toggle()
+            books[indexPath.row] = book
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+    }
 }

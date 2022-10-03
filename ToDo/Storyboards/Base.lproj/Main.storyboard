@@ -16,14 +16,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCellIdentifier" id="JfU-5j-uCy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCellIdentifier" id="JfU-5j-uCy" customClass="BookCell" customModule="ToDo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JfU-5j-uCy" id="aQC-XZ-5C6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-8y-duB">
+                                            <rect key="frame" x="8" y="8.5" width="28" height="27"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="circle" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                            <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-0p-0a3">
+                                            <rect key="frame" x="44" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="KuG-0p-0a3" secondAttribute="bottom" constant="11.5" id="8J2-v5-3ZC"/>
+                                        <constraint firstItem="TvU-8y-duB" firstAttribute="centerY" secondItem="aQC-XZ-5C6" secondAttribute="centerY" id="DDo-4i-fFf"/>
+                                        <constraint firstItem="TvU-8y-duB" firstAttribute="leading" secondItem="aQC-XZ-5C6" secondAttribute="leading" constant="8" id="E8e-1V-mhT"/>
+                                        <constraint firstAttribute="trailing" secondItem="KuG-0p-0a3" secondAttribute="trailing" constant="328" id="ICZ-J5-PgX"/>
+                                        <constraint firstItem="KuG-0p-0a3" firstAttribute="leading" secondItem="TvU-8y-duB" secondAttribute="trailing" constant="8" symbolic="YES" id="RRX-wK-wKO"/>
+                                        <constraint firstItem="KuG-0p-0a3" firstAttribute="top" secondItem="aQC-XZ-5C6" secondAttribute="top" constant="11" id="i2J-qe-nTn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="TvU-8y-duB" id="WO2-kn-5LX"/>
+                                    <outlet property="titleLabel" destination="KuG-0p-0a3" id="9EQ-dJ-9xf"/>
                                     <segue destination="Gjh-LT-Q5M" kind="presentation" id="0km-WZ-v2A"/>
                                 </connections>
                             </tableViewCell>
@@ -43,7 +71,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sx-2b-A15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="73"/>
+            <point key="canvasLocation" x="797" y="90"/>
         </scene>
         <!--New Book-->
         <scene sceneID="wAz-sq-wST">
@@ -222,7 +250,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSH-8u-PAk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rel-GO-DVP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2640.579710144928" y="91.741071428571431"/>
+            <point key="canvasLocation" x="2674" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fxl-Qm-Qn1">
@@ -261,7 +289,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0km-WZ-v2A"/>
+        <segue reference="GdV-LO-J1j"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>

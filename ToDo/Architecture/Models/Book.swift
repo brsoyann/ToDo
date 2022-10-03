@@ -7,14 +7,23 @@
 
 import UIKit
 
-struct Book: Equatable {
+struct Book: Equatable, Codable {
 
-    let id = UUID()
+    let id: UUID
     var title: String
     var author: String
     var readDate: Date
     var notes: String?
     var isComplete: Bool
+
+    init(title: String, author: String, readDate: Date, notes: String?, isComplete: Bool) {
+        self.id = UUID()
+        self.title = title
+        self.author = author
+        self.readDate = readDate
+        self.notes = notes
+        self.isComplete = isComplete
+    }
 
     static func loadBooks() -> [Book]? {
         return nil
