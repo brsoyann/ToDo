@@ -17,41 +17,43 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCellIdentifier" id="JfU-5j-uCy" customClass="BookCell" customModule="ToDo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="68.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JfU-5j-uCy" id="aQC-XZ-5C6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-8y-duB">
-                                            <rect key="frame" x="8" y="8.5" width="28" height="27"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="circle" catalog="system">
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                            </state>
-                                            <state key="selected" image="checkmark.circle.fill" catalog="system">
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                            </state>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-0p-0a3">
-                                            <rect key="frame" x="44" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aQi-HP-pNu">
+                                            <rect key="frame" x="8" y="8" width="98" height="52.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-8y-duB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="52.5"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="circle" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                    <state key="selected" image="checkmark.circle.fill" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-0p-0a3">
+                                                    <rect key="frame" x="48" y="0.0" width="50" height="52.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="KuG-0p-0a3" secondAttribute="bottom" constant="11.5" id="8J2-v5-3ZC"/>
-                                        <constraint firstItem="TvU-8y-duB" firstAttribute="centerY" secondItem="aQC-XZ-5C6" secondAttribute="centerY" id="DDo-4i-fFf"/>
-                                        <constraint firstItem="TvU-8y-duB" firstAttribute="leading" secondItem="aQC-XZ-5C6" secondAttribute="leading" constant="8" id="E8e-1V-mhT"/>
-                                        <constraint firstAttribute="trailing" secondItem="KuG-0p-0a3" secondAttribute="trailing" constant="328" id="ICZ-J5-PgX"/>
-                                        <constraint firstItem="KuG-0p-0a3" firstAttribute="leading" secondItem="TvU-8y-duB" secondAttribute="trailing" constant="8" symbolic="YES" id="RRX-wK-wKO"/>
-                                        <constraint firstItem="KuG-0p-0a3" firstAttribute="top" secondItem="aQC-XZ-5C6" secondAttribute="top" constant="11" id="i2J-qe-nTn"/>
+                                        <constraint firstItem="aQi-HP-pNu" firstAttribute="top" secondItem="aQC-XZ-5C6" secondAttribute="top" constant="8" id="LH1-KE-5fy"/>
+                                        <constraint firstItem="aQi-HP-pNu" firstAttribute="leading" secondItem="aQC-XZ-5C6" secondAttribute="leading" constant="8" id="lej-qF-c5o"/>
+                                        <constraint firstAttribute="bottom" secondItem="aQi-HP-pNu" secondAttribute="bottom" constant="8" id="x5s-8w-iKN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="isCompleteButton" destination="TvU-8y-duB" id="WO2-kn-5LX"/>
-                                    <outlet property="titleLabel" destination="KuG-0p-0a3" id="9EQ-dJ-9xf"/>
+                                    <outlet property="isCompleteButton" destination="TvU-8y-duB" id="M8o-aM-iyy"/>
+                                    <outlet property="nameLabel" destination="KuG-0p-0a3" id="Lvf-lf-nvE"/>
                                     <segue destination="Gjh-LT-Q5M" kind="presentation" id="0km-WZ-v2A"/>
                                 </connections>
                             </tableViewCell>
@@ -91,11 +93,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="284" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-vK-N5O">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-vK-N5O">
                                                     <rect key="frame" x="8" y="8" width="398" height="119"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-wk-HCc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="57" height="119"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="199" height="119"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="circle" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
@@ -107,11 +109,11 @@
                                                                 <action selector="isCompleteButtonTapped:" destination="vdQ-Hw-Oxq" eventType="touchUpInside" id="reZ-Dw-ufO"/>
                                                             </connections>
                                                         </button>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-2c-Byo">
-                                                            <rect key="frame" x="341" y="0.0" width="57" height="119"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-2c-Byo">
+                                                            <rect key="frame" x="199" y="0.0" width="199" height="119"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TItle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RST-JD-QRS">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="55.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="55.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                     <connections>
@@ -120,7 +122,7 @@
                                                                     </connections>
                                                                 </textField>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxM-6C-1nY">
-                                                                    <rect key="frame" x="0.0" y="63.5" width="57" height="55.5"/>
+                                                                    <rect key="frame" x="0.0" y="63.5" width="199" height="55.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                     <connections>
@@ -130,6 +132,11 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="LCz-wk-HCc" secondAttribute="bottom" id="DKL-1y-L94"/>
+                                                        <constraint firstItem="LCz-wk-HCc" firstAttribute="top" secondItem="DBO-vK-N5O" secondAttribute="top" id="Z5L-Xr-qZU"/>
+                                                        <constraint firstItem="LCz-wk-HCc" firstAttribute="leading" secondItem="DBO-vK-N5O" secondAttribute="leading" id="pLI-Yi-6Dd"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>

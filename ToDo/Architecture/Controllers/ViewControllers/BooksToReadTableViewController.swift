@@ -62,9 +62,8 @@ final class BooksToReadTableViewController: UITableViewController {
                 as? BookCell else { fatalError() }
 
         let book = books[indexPath.row]
-        cell.titleLabel?.text = book.title
+        cell.nameLabel?.text = book.title
         cell.isCompleteButton.isSelected = book.isComplete
-        cell.delegate = self
 
         return cell
     }
@@ -83,6 +82,7 @@ final class BooksToReadTableViewController: UITableViewController {
         if editingStyle == .delete {
             books.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            Book.saveBooks(books)
         }
     }
 
@@ -101,8 +101,8 @@ final class BooksToReadTableViewController: UITableViewController {
             }
 
         }
+        Book.saveBooks(books)
     }
-
 }
 
 extension BooksToReadTableViewController: BookCellDelegate {
@@ -112,6 +112,7 @@ extension BooksToReadTableViewController: BookCellDelegate {
             book.isComplete.toggle()
             books[indexPath.row] = book
             tableView.reloadRows(at: [indexPath], with: .automatic)
+            Book.saveBooks(books)
         }
     }
 }

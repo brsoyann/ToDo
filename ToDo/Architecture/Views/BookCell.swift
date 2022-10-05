@@ -14,7 +14,7 @@ protocol BookCellDelegate: AnyObject {
 class BookCell: UITableViewCell {
 
     @IBOutlet var isCompleteButton: UIButton!
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
 
     weak var delegate: BookCellDelegate?
 
