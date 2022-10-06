@@ -17,17 +17,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookCellIdentifier" id="JfU-5j-uCy" customClass="BookCell" customModule="ToDo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="68.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="74.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JfU-5j-uCy" id="aQC-XZ-5C6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aQi-HP-pNu">
-                                            <rect key="frame" x="8" y="8" width="98" height="52.5"/>
+                                            <rect key="frame" x="8" y="8" width="98" height="58.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-8y-duB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="52.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-8y-duB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="58.5"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="circle" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
@@ -35,9 +35,12 @@
                                                     <state key="selected" image="checkmark.circle.fill" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="completeButtonTapped:" destination="JfU-5j-uCy" eventType="touchUpInside" id="eea-7H-qGD"/>
+                                                    </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-0p-0a3">
-                                                    <rect key="frame" x="48" y="0.0" width="50" height="52.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-0p-0a3">
+                                                    <rect key="frame" x="48" y="0.0" width="50" height="58.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -93,11 +96,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-vK-N5O">
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DBO-vK-N5O">
                                                     <rect key="frame" x="8" y="8" width="398" height="119"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-wk-HCc">
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-wk-HCc">
                                                             <rect key="frame" x="0.0" y="0.0" width="199" height="119"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="LCz-wk-HCc" secondAttribute="height" id="kxz-Ik-4oa"/>
+                                                            </constraints>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="circle" catalog="system">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
@@ -109,7 +115,7 @@
                                                                 <action selector="isCompleteButtonTapped:" destination="vdQ-Hw-Oxq" eventType="touchUpInside" id="reZ-Dw-ufO"/>
                                                             </connections>
                                                         </button>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-2c-Byo">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hsz-2c-Byo">
                                                             <rect key="frame" x="199" y="0.0" width="199" height="119"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TItle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RST-JD-QRS">
@@ -132,11 +138,6 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="LCz-wk-HCc" secondAttribute="bottom" id="DKL-1y-L94"/>
-                                                        <constraint firstItem="LCz-wk-HCc" firstAttribute="top" secondItem="DBO-vK-N5O" secondAttribute="top" id="Z5L-Xr-qZU"/>
-                                                        <constraint firstItem="LCz-wk-HCc" firstAttribute="leading" secondItem="DBO-vK-N5O" secondAttribute="leading" id="pLI-Yi-6Dd"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -235,7 +236,7 @@
                     <navigationItem key="navigationItem" title="New Book" largeTitleDisplayMode="never" id="xsN-qj-Wp4">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vRw-qh-QPA">
                             <connections>
-                                <segue destination="rel-GO-DVP" kind="unwind" unwindAction="unwindToBookListSegue:" id="0Y7-wS-isE"/>
+                                <segue destination="rel-GO-DVP" kind="unwind" unwindAction="unwindToBooksToReadListWithSegue:" id="0Y7-wS-isE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="chV-jv-upI">

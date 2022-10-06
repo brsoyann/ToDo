@@ -11,10 +11,6 @@ final class BooksToReadTableViewController: UITableViewController {
 
     var books = [Book]()
 
-    @IBAction func unwindToBookListSegue (_ sender: UIStoryboardSegue ) {
-
-    }
-
     @IBSegueAction func editBook(
         _ coder: NSCoder,
         sender: Any?)
@@ -65,6 +61,7 @@ final class BooksToReadTableViewController: UITableViewController {
         cell.nameLabel?.text = book.title
         cell.isCompleteButton.isSelected = book.isComplete
 
+        cell.delegate = self
         return cell
     }
 
