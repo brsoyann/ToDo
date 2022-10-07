@@ -88,6 +88,7 @@ final class BookDetailTableViewController: UITableViewController {
         guard segue.identifier ==  "saveUnwind" else { return }
 
         guard
+            segue.identifier ==  "saveUnwind",
             let title = titleTextField.text,
             let author = authorTextField.text
         else { return }
@@ -119,19 +120,19 @@ final class BookDetailTableViewController: UITableViewController {
 
     // MARK: - CallBacks
 
-    @IBAction func textEditingChanged(_ sender: UITextField) {
+    @IBAction private func textEditingChanged(_ sender: UITextField) {
         updateSaveButtonState()
     }
 
-    @IBAction func returnPressed(_ sender: UITextField) {
+    @IBAction private func returnPressed(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
 
-    @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
+    @IBAction private func isCompleteButtonTapped(_ sender: UIButton) {
         isCompleteButton.isSelected.toggle()
     }
 
-    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+    @IBAction private func datePickerChanged(_ sender: UIDatePicker) {
         updateDueDateLabel(date: sender.date)
     }
 

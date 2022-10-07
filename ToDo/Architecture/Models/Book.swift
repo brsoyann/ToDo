@@ -34,7 +34,7 @@ struct Book: Equatable, Codable {
         guard let loadedBooks = try? Data(contentsOf: archiveURL)
         else { return nil }
         let propertyListDecoder = PropertyListDecoder()
-        return try? propertyListDecoder.decode(Array<Book>.self, from: loadedBooks)
+        return try? propertyListDecoder.decode([Book].self, from: loadedBooks)
     }
 
     static func saveBooks(_ books: [Book]) {

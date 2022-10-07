@@ -11,7 +11,7 @@ final class BooksToReadTableViewController: UITableViewController {
 
     var books = [Book]()
 
-    @IBSegueAction func editBook(
+    @IBSegueAction private func editBook(
         _ coder: NSCoder,
         sender: Any?)
     -> BookDetailTableViewController? {
@@ -83,9 +83,11 @@ final class BooksToReadTableViewController: UITableViewController {
         }
     }
 
-    @IBAction func unwindToBooksToReadList (segue: UIStoryboardSegue ) {
-        guard segue.identifier == "saveUnwind" else { return }
-        guard let sourceViewController = segue.source as? BookDetailTableViewController else { return }
+    @IBAction private func unwindToBooksToReadList (segue: UIStoryboardSegue ) {
+        guard
+            segue.identifier == "saveUnwind",
+            let sourceViewController = segue.source as? BookDetailTableViewController
+        else { return }
 
         if let book = sourceViewController.book {
             if let indexOfExistingBook = books.firstIndex(of: book) {

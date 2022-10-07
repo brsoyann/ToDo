@@ -24,7 +24,7 @@ class BookCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func completeButtonTapped(_ sender: Any) {
+    @IBAction private func completeButtonTapped(_ sender: Any) {
         delegate?.checkMarkTapped(sender: self)
     }
 }
