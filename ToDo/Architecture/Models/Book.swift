@@ -7,17 +7,40 @@
 
 import UIKit
 
-struct Book: Equatable {
+struct Book: Equatable, Codable {
 
-    let id = UUID()
+    let id: UUID
     var title: String
     var author: String
     var readDate: Date
     var notes: String?
     var isComplete: Bool
 
+    static let documentsDirectory =
+    FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let archiveURL =
+    documentsDirectory.appendingPathComponent("books").appendingPathExtension("plist")
+
+    init(title: String, author: String, readDate: Date, notes: String?, isComplete: Bool) {
+        self.id = UUID()
+        self.title = title
+        self.author = author
+        self.readDate = readDate
+        self.notes = notes
+        self.isComplete = isComplete
+    }
+
     static func loadBooks() -> [Book]? {
-        return nil
+        guard let loadedBooks = try? Data(contentsOf: archiveURL)
+        else { return nil }
+        let propertyListDecoder = PropertyListDecoder()
+        return try? propertyListDecoder.decode(Array<Book>.self, from: loadedBooks)
+    }
+
+    static func saveBooks(_ books: [Book]) {
+        let propertyListEncoder = PropertyListEncoder()
+        let codedBooks = try? propertyListEncoder.encode(books)
+        try? codedBooks?.write(to: archiveURL, options: .noFileProtection)
     }
 
     static func loadSampleBooks() -> [Book] {
